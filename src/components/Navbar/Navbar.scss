@@ -1,0 +1,36 @@
+@import "../../Variables.scss";
+
+.nav-wrapper {
+  background-color: $primary;
+}
+.nav-links-wrapper {
+  width: 650px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.help-text-wrapper {
+  color: $navLinkColor;
+}
+.help-text-wrapper span {
+  display: block;
+  text-align: right;
+}
+.burger-menu {
+  color: #fff;
+  font-size: 24px;
+  text-align: left;
+}
+.phone-icon {
+  font-size: 18px;
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-container {
+    padding: 10px 10px;
+  }
+}
