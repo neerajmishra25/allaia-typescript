@@ -5,6 +5,9 @@ import "./Navbar.scss";
 import { Desktop, Laptop, Tablet } from "../../Devices";
 import { FaBars, FaPhone } from "react-icons/fa";
 import SidebarNav from "./SidebarNav";
+import { AiOutlineClose } from "react-icons/ai";
+import Sidebar from "./../Sidebar/Sidebar";
+import "./SideNavbar.css";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,9 +44,22 @@ const Navbar: React.FC = () => {
             </div>
           </Laptop>
           <Laptop>
-            <div className="side-menu">
-              <SidebarNav show={isOpen} handleClick={handleClick} />
-            </div>
+            {/* <div className="side-menu"> */}
+            <Sidebar show={isOpen} handleClick={handleClick}>
+              {/* <div className="mobile-header"> */}
+              <div className="sidebar-logo-container">
+                <Logo color="black" />
+              </div>
+              <div className="close-icon-container">
+                <AiOutlineClose onClick={handleClick} />
+              </div>
+              {/* </div> */}
+              <div className="mobile-menu">
+                <NavMenu />
+              </div>
+            </Sidebar>
+            {/* <SidebarNav show={isOpen} handleClick={handleClick} /> */}
+            {/* </div> */}
           </Laptop>
         </div>
       </div>
